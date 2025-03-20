@@ -1,0 +1,242 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+
+:root {
+    --ast-global-color-0: #a97726;
+    --ast-global-color-1: #c39f63;
+    --ast-global-color-2: #ffffff;
+    --ast-global-color-3: #000000;
+    --ast-global-color-4: #ffffff;
+    --ast-global-color-5: #ffd0b7;
+    --ast-global-color-6: #111111;
+    --ast-global-color-7: #D1D5DB;
+    --ast-global-color-8: #111111;
+
+    --primarey-font-font-family: "Open Sans", sans-serif;
+    --secondary-font-font-family: "Roboto", sans-serif;
+    --e-global-typography-primary-font-family: "Roboto";
+    --e-global-typography-primary-font-weight: 600;
+    --e-global-typography-secondary-font-family: "Roboto Slab";
+    --e-global-typography-secondary-font-weight: 400;
+    --e-global-typography-text-font-family: "Roboto";
+    --e-global-typography-text-font-weight: 400;
+    --e-global-typography-accent-font-family: "Roboto";
+    --e-global-typography-accent-font-weight: 500;
+
+    --transition: all 0.3s ease;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width:95%;
+    margin: 0 auto;
+}
+
+/* start topbar here */
+.topbar{
+    background-color: var(--ast-global-color-0);
+}
+.top-bar-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 15px 5px;
+    
+}
+.top-link{
+    color: var(--ast-global-color-2);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--primarey-font-font-family);
+}
+.top-icon{
+    margin-right:8px;
+}
+/* end topbar here */
+/* start navigation here */
+.navbar-logo{
+    max-width: 223px;
+}
+.navbar-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.menubar{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    gap: 30px;
+    
+}
+.navbar-link{
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--ast-global-color-3);
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-family: var(--secondary-font-font-family);
+    padding: 5px 5px;
+}
+.navbar-link:hover{
+    color: var(--ast-global-color-1);
+    transition: var(--transition);
+}
+.hamburger{
+    display: none;
+    font-size:2.5rem;
+    /* background-color: var(--ast-global-color-2); */
+    background-color: transparent;
+    color: var(--ast-global-color-3);
+    margin-right: 10px;
+    border: none;
+}
+/* hero section start here */
+.hero{
+    min-height:80vh;
+    display: flex;
+    justify-content:center;
+    align-items:flex-end;
+    background:url("Spark-Vitality-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding-bottom: 40px;
+    
+}
+.hero-wrapper{
+    max-width:1240px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 30px;
+    border-radius: 10px 10px;
+}
+.hero-contain h1{
+    font-size: 3rem;
+    color: var(--ast-global-color-2);
+    font-weight: 700;
+    font-family: "Playfair", serif;
+    margin-bottom: 20px;
+}
+.hero-contain p{
+    font-size: 20px;
+    color: var(--ast-global-color-2);
+    margin-bottom: 20px;
+}
+.close-btn {
+   display: none;
+}
+/* hero section end here */
+/* end navigation here */
+/* Navigation menu for mobile */
+/* topbar media quorey start here */
+@media (max-width:767px){
+    .top-bar-wrapper{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    
+}
+/* topbar media quorey end here */
+/* start media query navigation here */
+@media (max-width:800px){
+        .menubar{
+            display: none;
+        }
+        .hamburger{
+            display: inline-block;
+            
+        }
+        .close-btn{
+            display: block;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--ast-global-color-6);
+            font-weight:400;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+        }
+}
+/* end media query navigation here */
+/* hero section media quiery start here */
+
+@media (max-width: 768px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 60vh; /* Reduce height for small screens */
+        padding:20px 10px;
+    }
+
+    .hero-wrapper {
+        max-width: 95%; /* Make it wider */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .hero-contain h1 {
+        font-size: 2rem; /* Smaller heading */
+        margin-bottom: 10px;
+    }
+
+    .hero-contain p {
+        font-size: 16px; /* Smaller text */
+        margin-bottom: 15px;
+    }
+}
+
+/* hero section media quiery start here */
+
+@media (max-width: 800px) {
+    .menubar {
+        display: flex; /* Instead of "none", so JavaScript can toggle visibility */
+        position: fixed;
+        top:0;
+        right:-100%;
+        width: 250px;
+        height: 100vh;
+        background-color: var(--ast-global-color-2);
+        flex-direction: column;
+        justify-content:center;
+        align-items:flex-start;
+        gap: 20px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+        padding-top: 140px;
+
+    }
+
+    .menubar.active {
+        right: 0; /* Slides in */
+    }
+    .menubar .navbar-link {
+        padding: 10px 20px; /* Add padding inside each menu item */
+    }
+    
+}
