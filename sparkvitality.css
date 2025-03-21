@@ -148,6 +148,114 @@
 /* end navigation here */
 /* Navigation menu for mobile */
 /* topbar media quorey start here */
+
+.about-section{
+    padding: 60px 10px;
+    background-color: var(--ast-global-color-2);
+}
+.about-section-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.about-section-wrapper > *{
+    flex-basis: 100%;
+}
+.about-section-img .about-img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.about-section-img{
+    position: relative;
+}
+
+.yoga-img{
+    width: 33%;
+    height: 190px;
+    background-color: var(--ast-global-color-2);
+    position: absolute;
+    padding-right: 15px;
+    border-radius: 0px 0px 15px 0px;
+    
+}
+.yoga-img img{
+    max-width: 100%;
+    border-radius: 10px;
+    animation: wooo 3.5s infinite;
+}
+
+
+@keyframes wooo{
+	0% {
+		transform: rotate3d(0, 0, 0);
+	}
+	50% {
+		transform: rotate3d(0, 1, 0, 180deg);
+	}
+	100% {
+		transform: rotate3d(0, 1, 0, 359deg);
+	}
+}
+
+/* .about-section-img::before{
+    content: "";
+    width: 33%;
+    height: 200px;
+    position: absolute;
+    background-color: var(--ast-global-color-2);
+    background-image: url(yoga-a.jpg);
+    background-repeat: no-repeat;
+    background-position: calc(0);
+    background-position:left;
+    top:0;
+    left:0;
+    border-radius: 10px 0px 0px 0px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
+    padding-right:15px;
+    padding-bottom:15x;
+
+} */
+.about-section-img::after{
+    content: "";
+    width: 30%;
+    height: 150px;
+    position: absolute;
+    background-color: var(--ast-global-color-2);
+    background-image: url(Wordpress-Transparent.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:center ;
+    right:0;
+    bottom:0;
+    border-radius: 10px 0px 0px 0px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
+
+}
+.about-section-content h2{
+    font-size: 2.1rem;
+    color:var(--ast-global-color-3);
+    font-weight: 600;
+    line-height: 1.3em;
+    font-family: var(--secondary-font-font-family);
+    margin-bottom: 1rem;
+}
+.about-section-content h5{
+    font-size:1.5rem;
+    font-weight: 600;
+    line-height: 1.2em;
+    color: var(--ast-global-color-0);
+    font-family: var(--secondary-font-font-family);
+    margin-bottom: 1.5em;
+}
+.about-section-content p{
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--primarey-font-font-family);
+    margin-bottom: 1.5em;
+}
+
 @media (max-width:767px){
     .top-bar-wrapper{
         display:flex;
