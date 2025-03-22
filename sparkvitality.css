@@ -227,10 +227,10 @@
 .about-section-content h5{
     font-size:1.5rem;
     font-weight: 600;
-    line-height: 1.2em;
+    line-height: 1.5em;
     color: var(--ast-global-color-0);
     font-family: var(--secondary-font-font-family);
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
 }
 .about-section-content p{
     font-size: 1rem;
@@ -238,7 +238,7 @@
     font-family: var(--primarey-font-font-family);
     margin-bottom: 1.5em;
     line-height: 1.5em;
-    line-height: 1.8em;
+   
 }
 /* about section end here */
 
@@ -336,7 +336,7 @@
     }
     
 }
-@media screen and (max-width:400px){
+@media screen and (max-width:480px){
     .about-section-wrapper{
         display: flex;
         flex-direction: column;
@@ -354,11 +354,103 @@
         flex-direction: column;
         justify-content: center;
         align-items:flex-start; 
+        padding-left: 10px;
+        padding-right: 10px;
         
     }
     .about-section-content h2{
-        font-size: 1.5rem;
+        font-size:22.8px;
         line-height: 1.5em;
+        font-weight: 600;
+    }
+    .about-section-content p{
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: var(--primarey-font-font-family);
+        margin-bottom: 1.5em;
+        line-height: 1.5em;
+        line-height: 1.8em;
+        text-align:left;
     }
 
 }
+@media screen and (max-width:768px) and (min-width:481px){
+    .about-section-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-section-img .yoga-img{
+        display:none;
+        
+    }
+    
+    .about-section-img::after{
+        display: none;
+    }
+    .about-section-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start; 
+        padding-left: 10px;
+        padding-right: 10px;
+        
+    }
+    .about-section-content h2{
+        font-size:22.8px;
+        line-height: 1.5em;
+        font-weight: 600;
+    }
+    .about-section-content p{
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: var(--primarey-font-font-family);
+        margin-bottom: 1.5em;
+        line-height: 1.5em;
+        line-height: 1.8em;
+        text-align:left;
+    }
+   
+}
+@media screen and (max-width:990px) and (min-width:769px) {
+    .about-section-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-section-img .yoga-img{
+        display:none;
+        
+    }
+    .about-section-img::after{
+        display: none;
+    }
+    .about-section-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start; 
+        padding-left: 10px;
+        padding-right: 10px;
+        
+    }
+    .about-section-content h2{
+        font-size:40px;
+        line-height: 1.5em;
+        font-weight: 600;
+    }
+    .about-section-content p{
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: var(--primarey-font-font-family);
+        margin-bottom: 1.5em;
+        line-height: 1.5em;
+        line-height: 1.8em;
+        text-align:left;
+    }
+   
+}
+
