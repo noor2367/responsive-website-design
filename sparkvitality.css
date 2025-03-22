@@ -104,6 +104,8 @@
     margin-right: 10px;
     border: none;
 }
+/* end navigation here */
+
 /* hero section start here */
 .hero{
     min-height:80vh;
@@ -145,9 +147,8 @@
    display: none;
 }
 /* hero section end here */
-/* end navigation here */
-/* Navigation menu for mobile */
-/* topbar media quorey start here */
+
+/* about section start here */
 
 .about-section{
     padding: 60px 10px;
@@ -199,24 +200,6 @@
 	}
 }
 
-/* .about-section-img::before{
-    content: "";
-    width: 33%;
-    height: 200px;
-    position: absolute;
-    background-color: var(--ast-global-color-2);
-    background-image: url(yoga-a.jpg);
-    background-repeat: no-repeat;
-    background-position: calc(0);
-    background-position:left;
-    top:0;
-    left:0;
-    border-radius: 10px 0px 0px 0px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
-    padding-right:15px;
-    padding-bottom:15x;
-
-} */
 .about-section-img::after{
     content: "";
     width: 30%;
@@ -254,7 +237,10 @@
     font-weight: 400;
     font-family: var(--primarey-font-font-family);
     margin-bottom: 1.5em;
+    line-height: 1.5em;
+    line-height: 1.8em;
 }
+/* about section end here */
 
 @media (max-width:767px){
     .top-bar-wrapper{
@@ -349,4 +335,30 @@
         padding: 10px 20px; /* Add padding inside each menu item */
     }
     
+}
+@media screen and (max-width:400px){
+    .about-section-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-section-img .yoga-img{
+        display: none;
+    }
+    .about-section-img::after{
+        display: none;
+    }
+    .about-section-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start; 
+        
+    }
+    .about-section-content h2{
+        font-size: 1.5rem;
+        line-height: 1.5em;
+    }
+
 }
