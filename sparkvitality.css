@@ -26,7 +26,7 @@
     --e-global-typography-accent-font-family: "Roboto";
     --e-global-typography-accent-font-weight: 500;
 
-    --transition: all 0.3s ease;
+    --transition: all 0.5s ease-in-out;
 }
 
 *{
@@ -96,14 +96,71 @@
     transition: var(--transition);
 }
 .hamburger{
-    display: none;
-    font-size:2.5rem;
+    display:none;
+    /* font-size:2.5rem; */
     /* background-color: var(--ast-global-color-2); */
-    background-color: transparent;
+    /* background-color: transparent;
     color: var(--ast-global-color-3);
     margin-right: 10px;
-    border: none;
+    border: none; */
 }
+
+.close-btn{
+    display:flex;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    background-color: transparent;
+    font-size:30px;
+    color: var(--ast-global-color-8);
+    border: none;
+    transition: var(--transition);
+}
+
+/* 
+.mobile-menu{
+    display:none;
+    position:fixed;
+    top: 0;
+    right:0;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--ast-global-color-4);
+    color: var(--ast-global-color-8);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    list-style: none;
+    padding-left: 20px;
+    padding-top: 40px;
+    transition: right 0.5s ease-in-out;
+} */
+
+.mobile-menu {
+    position:absolute;
+    top: 0;
+    right:-100%; /* Initially hidden off-screen */
+    width: 250px;
+    height: 100vh;
+    background-color: var(--ast-global-color-4);
+    color: var(--ast-global-color-8);
+    display: flex; /* Ensure it's visible when moved */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    list-style: none;
+    padding-left: 20px;
+    padding-top: 40px;
+    transition:var(--transition)/* Smooth sliding effect */
+}
+
+/* When menu is active, slide in */
+.mobile-menu.active {
+    right: 0;
+}
+
 /* end navigation here */
 
 /* hero section start here */
@@ -143,9 +200,7 @@
     color: var(--ast-global-color-2);
     margin-bottom: 20px;
 }
-.close-btn {
-   display: none;
-}
+
 /* hero section end here */
 
 /* about section start here */
@@ -241,8 +296,115 @@
    
 }
 /* about section end here */
+.footer-section{
+    background: linear-gradient(to right, var(--ast-global-color-3), var(--ast-global-color-6));
+    padding: 50px 0 20px;
+    color: white;
+    
+}
 
-@media (max-width:767px){
+.footer-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom:40px ;
+    padding: 10px 10px;
+}
+/* .footer-logo{
+    width: 100%;
+    height: 100px;
+    object-fit:contain;  
+} */
+
+.footer-logo {
+    width: 100%; /* Adjust width as needed */
+    height:100px; /* Maintain aspect ratio */
+    display: block;
+    object-fit:contain;
+    object-position: left;
+    margin-bottom: 20px;
+}
+
+.footer-coloumn p{
+    font-size:1.1rem;
+    font-family: var(--primarey-font-font-family);
+    line-height: 25px;
+}
+.footer-coloumn h3{
+    font-size: 1.5rem;
+    color: var(--ast-global-color-5);
+    margin-bottom:40px;
+    position: relative;
+}
+.footer-coloumn h3::after{
+    content: "";
+    width:100%;
+    height:1px;
+    background-color: var(--ast-global-color-7);
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+   
+}
+.footer-coloumn h3::before{
+    content: "";
+    width: 80px;
+    height: 3px;
+    background-color: var(--ast-global-color-4);
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom:-20px;
+}
+.contact-info{
+margin-bottom: 20px;
+}
+.contact-iteam{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size:20px;
+}
+.contact-icon{
+    margin-right: 10px;
+}
+
+.social-link{
+    display: flex;
+    gap:15px;
+    margin-top: 20px;
+}
+.social{
+    display: inline-flex;
+    width:40px;
+    height:40px;
+    font-size: 30px;
+    color: #ffffff;
+    background-color:#c28d38;
+    justify-content: center;
+    align-items: center;
+    border-radius:5px;
+    text-decoration: none;
+
+}
+.business-info{
+    margin-bottom:20px;
+}
+.business-timing{
+    display: flex;
+    justify-content: space-between;
+    font-size:18px;
+    margin-bottom: 15px;   
+}
+.footer-bottom{
+    text-align: center;
+    background-color: var(--ast-global-color-8);
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width:767px){
     .top-bar-wrapper{
         display:flex;
         flex-direction: column;
@@ -251,35 +413,23 @@
         text-align: center;
         gap: 20px;
     }
-    
+    .menubar{
+        display: none;
+    }
+    .hamburger{
+        display:inline-block;
+        color: #212529;
+        font-size: 36px;
+        background-color:transparent;
+        border: none;
+        
+    }
 }
-/* topbar media quorey end here */
-/* start media query navigation here */
-@media (max-width:800px){
-        .menubar{
-            display: none;
-        }
-        .hamburger{
-            display: inline-block;
-            
-        }
-        .close-btn{
-            display: block;
-            background: none;
-            border: none;
-            font-size: 2rem;
-            color: var(--ast-global-color-6);
-            font-weight:400;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            cursor: pointer;
-        }
-}
+
 /* end media query navigation here */
 /* hero section media quiery start here */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .hero {
         display: flex;
         flex-direction: column;
@@ -308,34 +458,7 @@
 
 /* hero section media quiery start here */
 
-@media (max-width: 800px) {
-    .menubar {
-        display: flex; /* Instead of "none", so JavaScript can toggle visibility */
-        position: fixed;
-        top:0;
-        right:-100%;
-        width: 250px;
-        height: 100vh;
-        background-color: var(--ast-global-color-2);
-        flex-direction: column;
-        justify-content:center;
-        align-items:flex-start;
-        gap: 20px;
-        transition: right 0.3s ease-in-out;
-        z-index: 1000;
-        padding-top:20px ;
-        
 
-    }
-
-    .menubar.active {
-        right: 0; /* Slides in */
-    }
-    .menubar .navbar-link {
-        padding: 10px 20px; /* Add padding inside each menu item */
-    }
-    
-}
 @media screen and (max-width:480px){
     .about-section-wrapper{
         display: flex;

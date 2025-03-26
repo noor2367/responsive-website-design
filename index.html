@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="sparkvitality.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <!-- start topbar here -->
@@ -28,14 +29,24 @@
                 <li><a href="#" class="navbar-link">Resources</a></li>
                 <li><a href="#" class="navbar-link">FAQ’s</a></li>
                 <li><a href="#" class="navbar-link">Contact</a></li>
-                <li><button class="close-btn">X</button></li>
+                
             </ul>
-            <button class="hamburger"><i class='bx bx-menu'></i></button>
+            <ul class="mobile-menu">
+                <li><button onclick=closeSidebar() class="close-btn">X</button></li>
+                <li><a href="#" class="navbar-link">Home</a></li>
+                <li><a href="#" class="navbar-link">About</a></li>
+                <li><a href="#" class="navbar-link">Services</a></li>
+                <li><a href="#" class="navbar-link">Resources</a></li>
+                <li><a href="#" class="navbar-link">FAQ’s</a></li>
+                <li><a href="#" class="navbar-link">Contact</a></li>
+                
+            </ul>
+            <button class="hamburger" onclick=showSidebar()><i class='bx bx-menu'></i></button>
         </div>
     </nav>
     <!-- end navigation here -->
 
-    <main>
+   
         <!-- hero-section start here -->
         <section class="hero">
             <div class="container hero-wrapper">
@@ -71,8 +82,74 @@
             </div>
         </div>
         <!-- end about section here -->
-    </main>
+   
+     <!-- start footer section here -->
+    <footer class="footer-section">
+       <div class="container footer-wrapper">
+        <!-- first coloumn -->
+        <div class="footer-coloumn">
+            <img class="footer-logo" src="Spark-Vitality-logo.png" alt="logo">
+            <p>Supporting Women in Their Transitional Midlife Years with Confidence, Care, and Holistic Solutions</p>
+        </div>
+        <!-- second coloumn -->
+        <div class="footer-coloumn">
+            <h3>Contact Info</h3>
+            <div class="contact-info">
+                <div class="contact-iteam">
+                    <span class="contact-icon">✆</span>
+                    <span>604-318-9990</span>
+                </div>
+                <div class="contact-iteam">
+                    <span class="contact-icon">✉</span>
+                    <span>cattwaterman@gmail.com</span>
+                    
+                </div>
+                <div class="social-link">
+                    <a href="#" class="social"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="#" class="social"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+            
+        </div>
+        <!-- third coloumn -->
+        <div class="footer-coloumn">
+            <h3>Hours of Operation</h3>
+            <div class="business-info">
+                    <div class="business-timing">
+                        <span class="business-day">Monday</span>
+                        <span class="business-hours">8:30 AM - 5:30 PM</span>
+                    </div>
+                   
+                        <div class="business-timing">
+                            <span class="business-day">Tuesday</span>
+                            <span class="business-hours">8:30 AM - 5:30 PM</span>
+                        </div>
+                       
+                            <div class="business-timing">
+                                <span class="business-day">Wednesday</span>
+                                <span class="business-hours">8:30 AM - 5:30 PM</span>
+                            </div>
+                            <div class="business-timing">
+                                <span class="business-day">Thursday</span>
+                                <span class="business-hours">8:30 AM - 5:30 PM</span>
+                            </div>
+                            <div class="business-timing">
+                                <span class="business-day">Friday</span>
+                                <span class="business-hours">8:30 AM - 5:30 PM</span>
+                            </div>
 
+            </div>
+
+
+        </div>
+
+       </div>
+       <div class="footer-bottom">
+        <p>Copyright © 2025 All Rights Reserved</p>
+       </div>
+
+    </footer >
+    <!-- end footer section here -->
     <script src="sparkvitality.js"></script>
 </body>
 </html>
